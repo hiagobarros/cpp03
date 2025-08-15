@@ -41,14 +41,14 @@ ClapTrap::~ClapTrap(void)
 void	ClapTrap::attack(const std::string& target)
 {
 	if (this->_ep <= 0 && this->_hp <= 0)
-		std::cout << "ClapTrap " << this->_name << ", I... I can`t attack...! My energy`s drained... and my body`s barely holding on..." << std::endl;
+		std::cout << "ClapTrap " << this->_name << ": I... I can`t attack...! My energy`s drained... and my body`s barely holding on..." << std::endl;
 	else if (this->_ep <= 0)
-		std::cout << "ClapTrap " << this->_name << ", Tch... I can`t attack... I`m out of energy!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << ": Tch... I can`t attack... I`m out of energy!" << std::endl;
 	else if (this->_hp <= 0)
-		std::cout << "ClapTrap " << this->_name << ", I can`t... My body`s too damaged... I don`t have enough HP to strike back!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << ": I can`t... My body`s too damaged... I don`t have enough HP to strike back!" << std::endl;
 	else
 	{
-		std::cout << "ClapTrap " << this->_name << ", A fierce strike lands on " << target << ", inflicting " << this->_atk << " points of damage!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << ": A fierce strike lands on " << target << ", inflicting " << this->_atk << "HP of damage!" << std::endl;
 		this->_ep--;
 	}
 }

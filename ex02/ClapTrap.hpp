@@ -33,5 +33,6 @@ class ClapTrap
 		std::string		getName(void) const;
 		unsigned int	getHp(void) const;
 		unsigned int	getEp(void) const;
+		
 };
 #endif

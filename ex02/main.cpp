@@ -11,9 +11,9 @@ int main(void)
 	std::cout << f1.getName() << " (original) has " << f1.getHp() << " HP and " << f1.getEp() << " stamina points" << std::endl;
 	
 	std::cout<<GRN<<"\n###############*Actions*###############"<<RST<<std::endl;
-	std::cout << "*Derived class new function*" << std::endl;
+	std::cout << "*Derived class new method*" << std::endl;
 	f1.highFivesGuys();
-	std::cout << "*Base class function not overwritten*" << std::endl;
+	std::cout << "*Base class method not overwritten*" << std::endl;
     
 	f1.attack(BLE"Blue Eyes Dragon\033[0m");
 

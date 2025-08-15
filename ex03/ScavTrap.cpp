@@ -8,24 +8,23 @@ unsigned int const	ScavTrap::defaultATK = 20;
 
 ScavTrap::ScavTrap(void) : ClapTrap("Default ScavTrap")
 {
-	this->_hp = 100;
-	this->_ep = 50;
-	this->_atk = 20;
+	this->_hp = ScavTrap::defaultHP;
+	this->_ep = ScavTrap::defaultEP;
+	this->_atk = ScavTrap::defaultATK;
 	std::cout << "ScavTrap default constructor called for " << this->_name << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 {
-	this->_hp = 100;
-	this->_ep = 50;
-	this->_atk = 20;
+	this->_hp = ScavTrap::defaultHP;
+	this->_ep = ScavTrap::defaultEP;
+	this->_atk = ScavTrap::defaultATK;
 	std::cout << "ScavTrap parameterized constructor called for " << this->_name << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other)
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	*this = other;
 }
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap &other)
@@ -44,14 +43,14 @@ ScavTrap::~ScavTrap(void)
 void	ScavTrap::attack(const std::string& target)
 {
 	if (this->_ep <= 0 && this->_hp <= 0)
-		std::cout << "ScavTrap " << this->_name << " cannot attack. Not enough energy points nor hit points." << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": I... I can`t attack...! My energy`s drained... and my body`s barely holding on..." << std::endl;
 	else if (this->_ep <= 0)
-		std::cout << "ScavTrap " << this->_name << " cannot attack. Not enough energy point." << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": Tch... I can`t attack... I`m out of energy!" << std::endl;
 	else if (this->_hp <= 0)
-		std::cout << "ScavTrap " << this->_name << " cannot attack. Not enough hit points." << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": I can`t... My body`s too damaged... I don`t have enough HP to strike back!" << std::endl;
 	else
 	{
-		std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_atk << " points of damage!" << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": A fierce strike lands on " << target << ", inflicting " << this->_atk << "HP of damage!" << std::endl;
 		this->_ep--;
 	}
 }

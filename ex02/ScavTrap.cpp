@@ -40,19 +40,19 @@ ScavTrap::~ScavTrap(void)
 void	ScavTrap::attack(const std::string& target)
 {
 	if (this->_ep <= 0 && this->_hp <= 0)
-		std::cout << "ScavTrap " << this->_name << " cannot attack. Not enough energy points nor hit points." << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": I... I can`t attack...! My energy`s drained... and my body`s barely holding on..." << std::endl;
 	else if (this->_ep <= 0)
-		std::cout << "ScavTrap " << this->_name << " cannot attack. Not enough energy point." << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": Tch... I can`t attack... I`m out of energy!" << std::endl;
 	else if (this->_hp <= 0)
-		std::cout << "ScavTrap " << this->_name << " cannot attack. Not enough hit points." << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": I can`t... My body`s too damaged... I don`t have enough HP to strike back!" << std::endl;
 	else
 	{
-		std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_atk << " points of damage!" << std::endl;
+		std::cout << "ScavTrap " << this->_name << ": A fierce strike lands on " << target << ", inflicting " << this->_atk << "HP of damage!" << std::endl;
 		this->_ep--;
 	}
 }
 
 void	ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap " << this->getName() << " is now in Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap " << this->getName() <<RED<< " is now in Gate keeper mode" <<RST<< std::endl;
 }

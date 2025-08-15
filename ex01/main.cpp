@@ -19,7 +19,7 @@ int main(void)
 	
 	std::cout<<GRN<<"\n###############*Actions*###############"<<RST<<std::endl;
 	std::cout << "*Base class function overwritten*" << std::endl;
-	s1.attack("Darkness");
+	s1.attack("OBITO");
 	std::cout << s1.getName() << " (original) now has " << s1.getHp() << " HP and " << s1.getEp() << " stamina points" << std::endl;
 	std::cout << "*Derived class new function*" << std::endl;
 	s1.guardGate();

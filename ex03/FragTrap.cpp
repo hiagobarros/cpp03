@@ -8,17 +8,17 @@ unsigned int const	FragTrap::defaultATK = 30;
 
 FragTrap::FragTrap(void) : ClapTrap("Default FragTrap")
 {
-	this->_hp = 100;
-	this->_ep = 100;
-	this->_atk = 30;
+	this->_hp = FragTrap::defaultHP;
+	this->_ep = FragTrap::defaultEP;
+	this->_atk = FragTrap::defaultATK;
 	std::cout << "FragTrap default constructor called for " << this->_name << std::endl;
 }
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 {
-	this->_hp = 100;
-	this->_ep = 100;
-	this->_atk = 30;
+	this->_hp = FragTrap::defaultHP;
+	this->_ep = FragTrap::defaultEP;
+	this->_atk = FragTrap::defaultATK;
 	std::cout << "FragTrap parameterized constructor called for " << this->_name << std::endl;
 }
 

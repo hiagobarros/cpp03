@@ -7,7 +7,7 @@ int	main(void)
 {
 	std::cout<<GRN<<"\n###############*Construct DiamondTrap*###############"<<RST<<std::endl;
 	DiamondTrap d1("RUDEUS");
-	std::cout << "*Derived class new function*" << std::endl;
+	std::cout << "*Derived class new method*" << std::endl;
 	d1.whoAmI();
 
 	std::cout<<GRN<<"\n###############*Actions*###############"<<RST<<std::endl;
